@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<style type="text/css">
+.my_div {
+    text-align : center;
+    font-family: sans-serif;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-color:#e1d8d8;
+    border-width: 2px 1px 1px 1px;
+    height: 55px;
+}
+.page-body{
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 35px;
+}
+</style>
+<div class="my_div"><h3>Hotels</h3></div>
+<div class = "page-body">
+		{% for i in range(hotel_list|length) %}
+		<div class="card-deck md-3">
+			{% for hotel in hotel_list[i] %}
+				<div class="card">
+					<!-- <img class = "card-img" src="{{ hotel['thumbnail_url'] }}" alt="Hotel Image"> -->
+					hello world
+
+					<div class="card-img-overlay"></div>
+				</div>
+				</div>
+			{% endfor %}
+		{% endfor %}
+</div>
+</div>
+{% endblock %}
