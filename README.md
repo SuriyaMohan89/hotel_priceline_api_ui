@@ -22,6 +22,8 @@ Try localhost:5000 to see it running.
 
 ## Screenshots
 
+Please note that during snapshotting screenshots, the API wasn't sending some hotel's images, hence the screenshot has some thumbnail images missing. Apologies, will fix it later.
+
 ### Homepage
 
 <img width="875" alt="screen shot 2018-08-05 at 11 00 38 pm" src="https://user-images.githubusercontent.com/36581704/43699437-98b2deea-9903-11e8-8232-328db9119827.png">
