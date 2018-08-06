@@ -6,6 +6,18 @@ This is UI only project with a jab at adaptive UI and flex and bootstrap. The in
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+## Tech Stack
+
+The codebase is implemented with python+Flask+Javascript(ofcoursr). Python&Flask is used to take some computation out of client (not needed for this project, but it also helped showcasing and also easy installing in any other machine). 
+
+* Python (<5% of codebase)
+* Flask for ORM (<5% of codebase).
+* Jinja for templating
+* Javascript(ES6), JQuery
+* Html5/CSS
+* Bootstrap
+
+
 ### Prerequisites and Installing
 
 You need python. Once you have python, please make sure you have [pip](https://pip.pypa.io/en/stable/installing/). Once you have both python and pip, please follow the below steps
