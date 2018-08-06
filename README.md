@@ -1,6 +1,6 @@
 # Hotel Grid UI using Priceline API
 
-This is UI only project with a jab at adaptive UI and flex and bootstrap. The input comes from a static priceline API and the UI is rendered using the grid layout.
+This is UI only project with a jab at adaptive UI and flex and bootstrap. The input comes from a static priceline API and the UI is rendered using the Bootstrap layout.
 
 ## Getting Started
 
@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Tech Stack
 
-The codebase is implemented with python+Flask+Javascript(ofcoursr). Python&Flask is used to take some computation out of client (not needed for this project, but it also helped showcasing and also easy installing in any other machine). 
+The codebase is implemented with python+Flask+Javascript(ofcourse). Python&Flask is used to take some computation out of client (not needed for this project, but it also helped showcasing and also easy installing in any other machine). 
 
 * Python (<5% of codebase)
 * Flask for ORM (<5% of codebase).
