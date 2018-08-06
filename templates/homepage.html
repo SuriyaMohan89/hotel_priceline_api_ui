@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hipmunk</title>
-	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">	
+    <title>Hipmunk</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
 <style type="text/css">
@@ -17,31 +17,31 @@
     height: 55px;
 }
 .page-body{
-	margin-left: 20%;
-	margin-right: 20%;
-	margin-top: 55px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 55px;
 }
 .col {
-	margin-bottom: 0px;
-	margin-right: 0px;
-	margin-left: 0px;
-	margin-top: 15px;
-	padding: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 15px;
+    padding: 0px;
 
 }
 
 .card{
-	display: -webkit-flex;
-	display: flex;
-	-webkit-justify-content: center;
-	justify-content: center;
-	-webkit-flex-wrap: wrap;
-	flex-wrap: wrap;
-	/*margin-top: 15px;*/
-	padding: 0px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    /*margin-top: 15px;*/
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     margin-right: 0px;
     border-right-width: 0px;
     border-top-width: 0px;
@@ -52,8 +52,8 @@
 
 }
 .card{
-	height: 10rem;
-	width: 15rem;
+    height: 10rem;
+    width: 15rem;
 }
 
 .card-img-overlay{
@@ -69,7 +69,7 @@
     border-color: #3c6a93;
 }
 .card-body{
-	padding: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
 }
@@ -103,81 +103,73 @@
     color: white;
 }
 .price-recomend{
-	display:inline-flex;
+    display:inline-flex;
 }
 .dropdown-item{
-	padding-right: 35px;
+    padding-right: 35px;
 }
 
 .fa{
     color: orange;
 }
-
-
-
 </style>
 <body>
-<div class="my_div"><h3>Hotels</h3>
-</div>
+<div class="my_div"><h3>Hotels</h3></div>
 
 <div class = "page-body">
-	<div class = "container no-padding">
+    <div class = "container no-padding">
         <div class = "row">
- 	{% for key in sample %}
-	<div class="col-xs-12 col-sm-6 col-md-4">
- 	<div class="card">
-  	<img class="card-img" src="{{ key['thumbnail_url'] }}" alt="Hotel Image">
-    <div class="card-img-overlay">
+            {% for key in sample %}
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="card">
+                    <img class="card-img" src="{{ key['thumbnail_url'] }}" alt="Hotel Image">
+                        <div class="card-img-overlay">
 
     <!-- <h6 class="card-title"><h6>{{ key["name"] }}</h6> -->
     
-    <div class="card-text"><h6>{{ key["name"] }}</h6>
-        <div class="inline"><div class ="rate"><span>
-    {% if key["stars"] is not none %}
-    {% for i in range(1, key["stars"]+1 | int) %}
-    <span class="fa fa-star checked"></span>
-{% endfor %}
-{% endif %}
-
-</div></div></div>
+                            <div class="card-text"><h6>{{ key["name"] }}</h6>
+                            <div class="inline"><div class ="rate"><span>
+                            {% if key["stars"] is not none %}
+                            {% for i in range(1, key["stars"]+1 | int) %}
+                            <span class="fa fa-star checked"></span>
+                            {% endfor %}
+                            {% endif %}
+                            </div>
+                            </div>
+                        </div>
 
     
- 	<div class="btn-group">
-  		<button class="btn btn-secondary btn-sm" type="button">
-    	Select
-  		</button>
-  		<button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    	<span class="sr-only"></span>
-  		</button>
+                            <div class="btn-group">
+                                <button class="btn btn-secondary btn-sm" type="button">Select</button>
+                                <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only"></span></button>
 
-  			<ul><div class="dropdown-menu dropdown-menu-right">
-    			<li><div class="price-recomend"><span><a class="dropdown-item" href="#">Priceline</a></span>
-    				<div style="padding-top: 5px;"><span>$50 </span>
-    				</div>
-    			</li>
-    			<div class="dropdown-divider"></div>
-    			<li role="separator" class="divider"></li>
-    			
-    			<li><div class="price-recomend"><span><a class="dropdown-item" href="#">Expedia </a></span>
-    				<div style="padding-top: 5px;"><span style="padding-right: 5px;">$50</span>
-    				</div>
-    			</li>
+                                <ul>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                    <li><div class="price-recomend"><span><a class="dropdown-item" href="#">Priceline</a></span>
+                                    <div style="padding-top: 5px;"><span>$50 </span></div>
+                                    </li>
+                                        <div class="dropdown-divider"></div>
+                                        <li role="separator" class="divider"></li>
+                
+                                    <li><div class="price-recomend"><span><a class="dropdown-item" href="#">Expedia </a></span>
+                                    <div style="padding-top: 5px;"><span style="padding-right: 5px;">$50</span></div>
+                                    </li>
+                                        <div class="dropdown-divider"></div>
+                                        <li role="separator" class="divider"></li>
+                
+                                    <li><div class="price-recomend"><span><a class="dropdown-item" href="#">Hipmunk</a></span>
+                                    <div style="padding-top: 5px;"><span>$50</span></div>
+                                    </li>
+                                    </div>
+                                </ul>
+                            </div>
 
-    			<div class="dropdown-divider"></div>
-    			<li role="separator" class="divider"></li>
-    			
-    			<li><div class="price-recomend"><span><a class="dropdown-item" href="#">Hipmunk</a></span>
-    				<div style="padding-top: 5px;"><span>$50</span>
-					</div>
-				</li></div>
-  		</ul>
-    </div>
-
-</div>
-</div>
-</div>
+                </div>
+            </div>
+        </div>
  {% endfor %}
-</div>
+    </div>
 </div>
 </div>
 <script src="http://code.jquery.com/jquery.js"></script>
