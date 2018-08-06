@@ -22,4 +22,16 @@ Try localhost:5000 to see it running.
 
 ## Screenshots
 
-TBD
+### Homepage
+
+<img width="875" alt="screen shot 2018-08-05 at 11 00 38 pm" src="https://user-images.githubusercontent.com/36581704/43699437-98b2deea-9903-11e8-8232-328db9119827.png">
+
+### Adaptive css
+<img width="369" alt="screen shot 2018-08-05 at 11 01 10 pm" src="https://user-images.githubusercontent.com/36581704/43699478-c0eacf58-9903-11e8-81f4-f66c1b580c3c.png">
+
+### Dropdown
+<img width="883" alt="screen shot 2018-08-05 at 11 01 29 pm" src="https://user-images.githubusercontent.com/36581704/43699490-ce690e24-9903-11e8-803a-a677e8dc8403.png">
+
+## Known issue
+
+The adaptive css overflows sometimes upon resizing. This is due to a pragmatic hack in the code, working on refactoring and removing this.
