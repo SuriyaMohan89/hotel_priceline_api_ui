@@ -22,7 +22,7 @@ Try localhost:5000 to see it running.
 
 ## Screenshots
 
-Please note that during snapshotting screenshots, the API wasn't sending some hotel's images, hence the screenshot has some thumbnail images missing. Apologies, will fix it later.
+*Please note that during snapshotting screenshots, the API wasn't sending some hotel's images, hence the screenshot has some thumbnail images missing. Apologies, will fix it later.*
 
 ### Homepage
 
