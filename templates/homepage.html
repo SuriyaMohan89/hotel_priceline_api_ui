@@ -3,6 +3,7 @@
 <head>
 	<title>Hipmunk</title>
 	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">	
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
 <style type="text/css">
 .my_div {
@@ -91,7 +92,7 @@
 }
 .card-text{
     width:180px;
-    padding-top: 65px;
+    padding-top: 85px;
     padding-left: 10px;
 }
  h6 {
@@ -108,13 +109,16 @@
 	padding-right: 35px;
 }
 
+.fa{
+    color: orange;
+}
+
 
 
 </style>
 <body>
 <div class="my_div"><h3>Hotels</h3>
 </div>
- 
 
 <div class = "page-body">
 	<div class = "container no-padding">
@@ -127,7 +131,16 @@
 
     <!-- <h6 class="card-title"><h6>{{ key["name"] }}</h6> -->
     
-    <div class="card-text"><h6>{{ key["name"] }}</h6><div class="inline"><div class="score"><h6>{{ key["stars"] }}</h6><div class="rate"></div></div></div></div>
+    <div class="card-text"><h6>{{ key["name"] }}</h6>
+        <div class="inline"><div class ="rate"><span>
+    {% if key["stars"] is not none %}
+    {% for i in range(1, key["stars"]+1 | int) %}
+    <span class="fa fa-star checked"></span>
+{% endfor %}
+{% endif %}
+
+</div></div></div>
+
     
  	<div class="btn-group">
   		<button class="btn btn-secondary btn-sm" type="button">
@@ -168,31 +181,32 @@
 </div>
 </div>
 <script src="http://code.jquery.com/jquery.js"></script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     "use strict"
     let rating = $(".score").val();
     console.log(rating);
-    if (rating != ""){
-    rating = parseInt(rating);
-    console.log(rating);
-        if (rating == 1) {
-            $(".rate").html("Poor")
-        } else if (rating === 2){
-            $(".rate").html("average")
-        } else if (rating === 3){
-            $(".rate").html("Good")
-        } else if (rating === 4){
-            $(".rate").html("Very Good")
-        }
-        else if (rating === 5){
-            $(".rate").html("Excellent")
-        }
-    }
-    else{
+    console.log("fff");
+    if (rating == ""){
+        console.log("hello");
         $(".rate").html("Not Rated")
-    }
-
-</script>
+    } else {
+        rating = parseInt(rating);
+        console.log(rating);
+            if (rating == 1) {
+                $(".rate").html("Poor")
+            } else if (rating === 2){
+                $(".rate").html("average")
+            } else if (rating === 3){
+                $(".rate").html("Good")
+            } else if (rating === 4){
+                $(".rate").html("Very Good")
+            }
+            else if (rating === 5){
+                $(".rate").html("Excellent")
+            }
+        }
+        
+</script> -->
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
