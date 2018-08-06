@@ -62,13 +62,44 @@
     padding-left: 0px;
     padding-top: 0px;
 }
-.card-img-top {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
+.btn-secondary {
+    color: #fff;
+    background-color: orange;
+    border-color: #3c6a93;
 }
 .card-body{
 	padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.btn{
+    margin-top: auto;
+}
+.btn-group, .btn-group-vertical {
+    position:absolute;
+    top:75%;
+    right:0;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    vertical-align: middle;
+}
+.btn-group{
+    width:85px;
+    padding:0;
+    float: right;
+    bottom:100px;
+}
+.card-text{
+    width:180px;
+    padding-top: 65px;
+    padding-left: 10px;
+}
+ h6 {
+    margin-bottom: .5rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+    color: white;
 }
 .price-recomend{
 	display:inline-flex;
@@ -76,6 +107,7 @@
 .dropdown-item{
 	padding-right: 35px;
 }
+
 
 
 </style>
@@ -93,8 +125,10 @@
   	<img class="card-img" src="{{ key['thumbnail_url'] }}" alt="Hotel Image">
     <div class="card-img-overlay">
 
-    <h6 class="card-title"><h6>{{ key["name"] }}</h6>
-    <!-- <p class="card-text">{{ key["description"] }}</p> -->
+    <!-- <h6 class="card-title"><h6>{{ key["name"] }}</h6> -->
+    
+    <div class="card-text"><h6>{{ key["name"] }}</h6><div class="inline"><div class="score"><h6>{{ key["stars"] }}</h6><div class="rate"></div></div></div></div>
+    
  	<div class="btn-group">
   		<button class="btn btn-secondary btn-sm" type="button">
     	Select
@@ -124,8 +158,8 @@
 					</div>
 				</li></div>
   		</ul>
-  	</div>
-	<!-- </div> -->
+    </div>
+
 </div>
 </div>
 </div>
@@ -133,8 +167,32 @@
 </div>
 </div>
 </div>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript">
+    "use strict"
+    let rating = $(".score").val();
+    console.log(rating);
+    if (rating != ""){
+    rating = parseInt(rating);
+    console.log(rating);
+        if (rating == 1) {
+            $(".rate").html("Poor")
+        } else if (rating === 2){
+            $(".rate").html("average")
+        } else if (rating === 3){
+            $(".rate").html("Good")
+        } else if (rating === 4){
+            $(".rate").html("Very Good")
+        }
+        else if (rating === 5){
+            $(".rate").html("Excellent")
+        }
+    }
+    else{
+        $(".rate").html("Not Rated")
+    }
 
-
+</script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
